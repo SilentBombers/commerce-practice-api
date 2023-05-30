@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - "3326:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: commerce
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      TZ: Asia/Seoul
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+#TODO 나중에 주석제거
+#    volumes:
+#      - ./db/mysql/data:/var/lib/mysql
