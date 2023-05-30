@@ -4,7 +4,7 @@ import jakarta.persistence.*
 
 @Entity
 class MemberEntity(
-    id: String,
+    id: Int,
     name: String,
     phoneNumber: String?,
     address: String?,
@@ -12,7 +12,7 @@ class MemberEntity(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: String = id
+    val id: Int = id
 
     @Column
     val name: String = name
