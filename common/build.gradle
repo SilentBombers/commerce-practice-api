@@ -1,0 +1,12 @@
+group 'com.silentbombers.common'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+test {
+    useJUnitPlatform()
+}

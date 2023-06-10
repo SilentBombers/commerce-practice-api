@@ -1,0 +1,8 @@
+rootProject.name = 'commerce-practice-api'
+
+include 'common'
+include 'member-service'
+include 'payment-service'
+include 'order-service'
+include 'catalogue-service'
+
