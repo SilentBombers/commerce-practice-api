@@ -1,0 +1,18 @@
+plugins {
+    id 'com.palantir.docker' version '0.25.0'
+}
+
+
+group = 'com.silentbombers.catalogue'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+}
+
+docker {
+    println(tasks.bootJar.outputs.files)
+    name rootProject.name+'-'+project.name + ":" + version
+    dockerfile file('../Dockerfile')
+    files tasks.bootJar.outputs.files
+    buildArgs(['JAR_FILE': tasks.bootJar.outputs.files.singleFile.name])
+}
